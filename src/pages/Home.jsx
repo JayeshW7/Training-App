@@ -1,36 +1,46 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Home = () => {
   return (
     <>
       <header className="hero">
         <div className="hero-content">
-          <h1>Your Personal Home Workout Guide</h1>
-          <p>Transform your life with personalized workout routines, expert guidance, and progress tracking tools designed for your fitness journey</p>
+          <h1>Explore the Healing Power of Plants</h1>
+          <p>Discover a diverse collection of medicinal plants, learn about their traditional uses, and explore how to grow your own virtual herbal garden</p>
           <div className="hero-cta">
-            <button>Get Started</button>
-            <button>Learn More</button>
+            <Link to="/plants"><button>Explore Plants</button></Link>
+            <Link to="/learn"><button>Learn More</button></Link>
           </div>
         </div>
       </header>
 
       <main>
-        <section className="progress-tracking">
-          <h2>Track Your Progress</h2>
-          <div className="progress-cards">
-            <div className="progress-card">
-              <h3>Weekly Workouts</h3>
-              <div className="progress-circle">4/5</div>
+        <section className="featured-section">
+          <h2>Discover Nature's Pharmacy</h2>
+          <div className="feature-cards">
+            <div className="feature-card">
+              <h3>Identify Plants</h3>
+              <div className="feature-icon">🔍</div>
+              <p>Learn to identify medicinal plants by their characteristics and properties</p>
             </div>
-            <div className="progress-card">
-              <h3>Calories Burned</h3>
-              <div className="progress-circle">2,500</div>
+            <div className="feature-card">
+              <h3>Medicinal Uses</h3>
+              <div className="feature-icon">🌿</div>
+              <p>Explore traditional and modern medicinal applications of healing plants</p>
             </div>
-            <div className="progress-card">
-              <h3>Workout Streak</h3>
-              <div className="progress-circle">7 days</div>
+            <div className="feature-card">
+              <h3>Growing Guide</h3>
+              <div className="feature-icon">🌱</div>
+              <p>Get expert advice on cultivating your own medicinal herb garden</p>
             </div>
           </div>
+        </section>
+
+        <section className="garden-section">
+          <h2>Start Your Virtual Garden</h2>
+          <p>Create a personalized virtual garden where you can track growth, learn cultivation techniques, and discover plant interactions</p>
+          <Link to="/garden"><button className="garden-btn">My Garden</button></Link>
         </section>
       </main>
     </>
